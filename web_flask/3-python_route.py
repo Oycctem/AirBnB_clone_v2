@@ -8,6 +8,8 @@ app = Flask(__name__)
 @app.route('/python/<text>', strict_slashes=False)
 def index(text="is cool"):
     """ Returns Python followed by the value of text"""
+    if not text:
+        text ="is cool"
     return 'Python {}'.format(text.replace('_', ' '))
 
 if __name__ == "__main__":
