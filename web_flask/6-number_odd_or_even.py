@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/number_odd_or_even/<n>', strict_slashes=False)
 def imanumber2(n):
     """ Returns if an int is odd or even """
-    return render_template('6-number_odd_or_even.html', n=10, evenness="even" if 10 % 2 == 0 else "odd")
+    return render_template('6-number_odd_or_even.html', n=n, evenness="even" if n % 2 == 0 else "odd")
 
 
 if __name__ == "__main__":
