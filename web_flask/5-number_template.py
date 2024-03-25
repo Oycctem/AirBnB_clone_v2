@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
-def imanumber(n):
+def isanumber(n):
     """ Returns HTML page only if n is an int """
     return render_template('5-number.html', n=n)
 
